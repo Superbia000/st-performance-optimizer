@@ -1,0 +1,9 @@
+{
+  "display_name": "🚀 Performance Optimizer",
+  "loading_order": 0,
+  "js": "index.js",
+  "css": "css/performance.css",
+  "author": "ST Refactor Team",
+  "version": "1.0.0",
+  "description": "Comprehensive performance optimization for SillyTavern: lazy loading, DOM batching, memory management, event leak fixing."
+}

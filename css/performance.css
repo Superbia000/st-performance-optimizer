@@ -1,0 +1,24 @@
+/* performance.css - 即时生效的性能辅助 */
+/* 启动时隐藏非关键面板，减少首帧绘制负载 */
+.splash-screen #sheld,
+.splash-screen #left-nav-panel,
+.splash-screen #right-nav-panel {
+    display: none;
+}
+
+/* 强制 GPU 加速滚动容器 */
+#chat,
+#left-nav-panel .drawer-content {
+    will-change: scroll-position;
+    transform: translateZ(0);
+}
+
+/* 重排保护：消息区域使用独立的合成层 */
+#chat .mes {
+    contain: layout style;
+}
+
+/* 减少不必要重绘的通用项 */
+input, textarea {
+    contain: style;
+}
